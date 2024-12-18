@@ -72,7 +72,7 @@ export function FormAddProfile(props: FormAddProfileProps) {
                 <FormItem>
                   <FormLabel>Profile name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Gussie" {...field} />
+                    <Input placeholder="Profile name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -93,12 +93,12 @@ export function FormAddProfile(props: FormAddProfileProps) {
                       {dataProfilesImages.map((data) => (
                         <FormItem
                           key={data.urlImage}
-                          className="flex flex-col-reverse justify-center items-center space-x-5 space-y-0 cursor-pointer"
+                          className="flex  flex-col-reverse justify-center items-center space-x-5 space-y-0 cursor-pointer  w-full rounded-lg "
                         >
-                          <FormControl className="text-white ml-3 mt-1">
-                            <RadioGroupItem value={data.urlImage} />
+                          <FormControl className="hidden">
+                            <RadioGroupItem  value={data.urlImage} />
                           </FormControl>
-                          <FormLabel className="font-normal flex justify-center w-full">
+                          <FormLabel className="font-normal flex justify-center w-full ">
                             <Image
                               src={data.urlImage}
                               alt="Profile"
@@ -106,8 +106,8 @@ export function FormAddProfile(props: FormAddProfileProps) {
                               height={50}
                               className={
                                 field.value === data.urlImage
-                                  ? "cursor-pointer border-white border"
-                                  : ""
+                                  ? "cursor-pointer border-white border rounded-lg before:hover:scale-150 transition-all duration-300 scale-125 "
+                                  : "rounded-lg hover:scale-150 transition-all duration-300 "
                               }
                             />
                           </FormLabel>

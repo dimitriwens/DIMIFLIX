@@ -37,7 +37,8 @@ export function TrendingMovies(props: TrendingMoviesProps) {
                   className="h-auto w-auto md:max-h-[180px] lg:max-h-full"
                 />
               </div>
-              <InfoExtraFilm movie={movie} />
+              <InfoExtraFilm movie={movie}  />
+              
             </div>
           ))}
         </div>

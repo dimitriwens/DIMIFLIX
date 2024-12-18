@@ -8,7 +8,7 @@ export function SliderVideo() {
       <video
         autoPlay
         loop
-        muted
+        controls
         className="brightness-50 object-fill w-full h-[80vw] md:h-[56.25vw] lg:h-[45vw]"
         src="/videos/video-trailer-test.mp4"
       />

@@ -34,7 +34,7 @@ export function InfoExtraFilm(props: InfoExtraFilmProps) {
         <div className="p-4 shadow-lg">
             <ActionsButtonsFilm idFilm={movie.id} />
 
-            <ChaptersInfo age={movie.age} duration={movie.duration} />
+            <ChaptersInfo age={movie.age} duration={movie.duration} genre={movie.genre} />
 
             <FilmGenres genres={movie.genre} />
             </div>

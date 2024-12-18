@@ -1,1 +1,1 @@
-export * from "SliderVideo";
+export * from "./SliderVideo";

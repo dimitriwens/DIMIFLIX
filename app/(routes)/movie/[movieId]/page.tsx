@@ -1,14 +1,16 @@
 import { db } from "@/lib/db";
 import { redirect } from "next/navigation";
-
 import { NavbarFilm } from "./components/NavbarFilm";
 import { MovieVideo } from "./components/MovieVideo";
 
-export default async function MovieIdPage({
-  params,
-}: {
-  params: { movieId: string };
-}) {
+
+interface MoviePageProps {
+  params: {
+    movieId: string;
+  };
+}
+
+export default async function MovieIdPage({ params }: MoviePageProps) {
   const normalMovies = await db.normalMovies.findUnique({
     where: {
       id: params.movieId,

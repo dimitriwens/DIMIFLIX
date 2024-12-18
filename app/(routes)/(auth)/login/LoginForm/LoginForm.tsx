@@ -22,7 +22,7 @@ import { useRouter } from "next/navigation";
 
 export function LoginForm() {
   const router = useRouter();
- const [error, setError] = useState<string | undefined>("");
+  const [error, setError] = useState<string | undefined>("");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -63,7 +63,7 @@ export function LoginForm() {
                 <Input
                   placeholder="E-mail"
                   {...field}
-                  className="h-14 text-white"
+                  className="h-8 text-white"
                 />
               </FormControl>
               <FormMessage />
@@ -80,17 +80,15 @@ export function LoginForm() {
                   placeholder="Password"
                   {...field}
                   type="password"
-                  className="h-14 text-white"
+                  className="h-8 text-white"
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-
         <FormError message={error} />
-
-        <Button type="submit" className="w-full bg-[#E50914]">
+        <Button type="submit" className="w-full h-8 bg-[#E50914]">
           Log in
         </Button>
       </form>

@@ -36,6 +36,7 @@ export function Profiles(props: ProfilesProps) {
 
   const onClickUser = (user: UserNetflix) => {
     changeCurrentUser(user);
+    router.push("/");
     
   };
 

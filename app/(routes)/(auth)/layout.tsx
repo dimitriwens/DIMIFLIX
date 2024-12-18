@@ -6,7 +6,8 @@ export default function AuthLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-full">
+  <section className="relative w-full min-h-screen">
+      <div className="h-full">
       <div className="h-full relative">
         <div className="bg-black h-full min-h-screen absolute w-full -z-10">
           <div className="bg-[url('/login-bg.jpg')] h-full opacity-40 bg-no-repeat bg-cover" />
@@ -15,9 +16,10 @@ export default function AuthLayout({
           <Logo />
         </div>
         <div className="h-full w-full max-w-md mx-auto">
-          <div className="bg-black/70 px-14 py-16">{children}</div>
+          <div className="bg-black/70 px-14 pt-6 pb-2 rounded-lg">{children}</div>
         </div>
       </div>
     </div>
+  </section>
   );
 }

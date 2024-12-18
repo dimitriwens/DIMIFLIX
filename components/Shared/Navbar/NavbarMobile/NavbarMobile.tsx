@@ -1,11 +1,9 @@
 import { BellRing, Menu, Search } from "lucide-react";
 import Link from "next/link";
-
 import { itemsNavbar } from "@/data/itemsNavbar";
-
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/Shared/Logo";
-import { NavbarMobileProps } from "./NavBarMobile.types";
+import { NavbarMobileProps } from "./NavbarMobile.types";
 import { SelectorProfile } from "@/components/Shared/SelectorProfile";
 
 export function NavbarMobile(props: NavbarMobileProps) {

@@ -36,14 +36,16 @@ export function Profiles(props: ProfilesProps) {
 
   const onClickUser = (user: UserNetflix) => {
     changeCurrentUser(user);
-    router.push("/");
+    
   };
 
   const deleteUser = async (userIdNetflix: string) => {
     try {
       axios.delete("/api/userNetflix", { data: { userIdNetflix } });
       setManageProfiles(false);
-      router.refresh();
+      toast({ title: "User successfully deleted!" });
+      router.push("/profiles");
+
     } catch (error) {
       console.log(error);
       toast({ title: "An error has occured", variant: "destructive" });
@@ -51,8 +53,8 @@ export function Profiles(props: ProfilesProps) {
   };
 
   return (
-    <div>
-      <div className="flex gap-7">
+    <section>
+      <div className="flex gap-7 items-center justify-center">
         {users.map((user) => (
           <div
             key={user.id}
@@ -69,7 +71,7 @@ export function Profiles(props: ProfilesProps) {
                 "border-transparent hover:border-2 hover:border-white rounded-md"
               )}
             />
-            <p className="mt-2 text-gray-500 uppercase text-lg">
+            <p className="mt-2 text-gray-500 text-lg">
               {user.profileName}
             </p>
 
@@ -119,6 +121,6 @@ export function Profiles(props: ProfilesProps) {
           Manage profiles
         </Button>
       </div>
-    </div>
+    </section>
   );
 }

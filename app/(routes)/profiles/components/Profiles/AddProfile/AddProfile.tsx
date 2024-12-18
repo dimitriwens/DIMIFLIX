@@ -27,12 +27,12 @@ export function AddProfile() {
           >
             <PlusCircle className="w-16 h-16 text-gray-500" />
           </div>
-          <p className="mt-2 text-gray-500 text-lg text-center">Add profile</p>
+          <p className="mt-4 text-gray-500 text-lg text-center">Add profile</p>
         </div>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] bg-black">
+      <DialogContent className="sm:max-w-[425px] bg-black p-4">
         <DialogHeader>
-          <DialogTitle>Add profile</DialogTitle>
+          <DialogTitle className="mb-2">Add profiles</DialogTitle>
           <DialogDescription>
             Add different profiles to your app
           </DialogDescription>

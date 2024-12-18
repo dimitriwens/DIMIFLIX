@@ -10,6 +10,10 @@ const nextConfig = {
                 },
             ],
         },
+        reactStrictMode: true,
+        experimental: {
+          appDir: true, // Enable app directory if you're using Next.js 13+
+        },
 };
 
 export default nextConfig;

@@ -3,14 +3,13 @@ import { redirect } from "next/navigation";
 import { NavbarFilm } from "./components/NavbarFilm";
 import { MovieVideo } from "./components/MovieVideo";
 
+export default async function MovieIdPage({
+  params: rawParams,
+}: {
+  params: Promise<{ movieId: string }>;
+}) {
+  const params = await rawParams;
 
-interface MoviePageProps {
-  params: {
-    movieId: string;
-  };
-}
-
-export default async function MovieIdPage({ params }: MoviePageProps) {
   const normalMovies = await db.normalMovies.findUnique({
     where: {
       id: params.movieId,
